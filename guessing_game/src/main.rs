@@ -7,8 +7,9 @@ use std::cmp::Ordering::Equal;
 
 fn main() {
     let secret_number = rand::thread_rng().gen_range(1,101);
-    println!("The secret number is: {}",secret_number);
-    println!("Guess the number!");
+    // println!("The secret number is: {}",secret_number);
+    loop {
+        println!("Guess the number!");
     println!("Please input your guess.");
     let mut guess = String::new();
     
@@ -20,6 +21,10 @@ fn main() {
     match guess.cmp(&secret_number) {
         Less => println!("Too small!"),
         Greater => println!("Too big!"),
-        Equal => println!("You win!"),
+        Equal => {
+            println!("You win!");
+            break;
+        }
+    }
     }
 }
