@@ -19,5 +19,4 @@ fn main() {
     println!("ID: {}, Name: {}, Active: {}", player3.game_id, player3.gamer_name, player3.active);
     println!("Point: {}, {}, {}", point.0, point.1, point.2);
     println!("Color: {}, {}, {}", black.0, black.1, black.2);
-
 }
