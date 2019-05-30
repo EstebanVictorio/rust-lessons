@@ -16,10 +16,12 @@ mod front_of_house {
     }
 }
 
-pub fn eat_at_restaurant() {
-    crate::front_of_house::hosting::add_to_waitlist();
+use crate::front_of_house::hosting;
 
-    front_of_house::hosting::add_to_waitlist();
+pub fn eat_at_restaurant() {
+    hosting::add_to_waitlist();
+
+    hosting::add_to_waitlist();
 }
 
 mod back_of_house {
@@ -31,7 +33,11 @@ mod back_of_house {
 
     impl Breakfast {
         pub fn summer(toast: &str) -> Breakfast {
-            
+            Breakfast {
+                toast: String::from(toast),
+                seasonal_fruit: String::from("peaches")
+
+            }
         }
     }
 
