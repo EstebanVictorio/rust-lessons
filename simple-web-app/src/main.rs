@@ -2,6 +2,8 @@
 
 #[macro_use] extern crate rocket;
 
+extern crate restaurant;
+use restaurant::Hosting;
 
 struct Message {
     contents: String,
@@ -9,6 +11,7 @@ struct Message {
 
 #[get("/")]
 fn home() -> String {
+    Hosting::add_to_waiting_list();
     String::from("Home page")
 }
 

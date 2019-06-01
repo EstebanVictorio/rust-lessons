@@ -16,12 +16,12 @@ mod front_of_house {
     }
 }
 
-use crate::front_of_house::hosting;
+pub use front_of_house::hosting as Hosting;
 
 pub fn eat_at_restaurant() {
-    hosting::add_to_waitlist();
+    Hosting::add_to_waitlist();
 
-    hosting::add_to_waitlist();
+    Hosting::add_to_waitlist();
 }
 
 mod back_of_house {
