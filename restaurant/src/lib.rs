@@ -1,7 +1,7 @@
 mod front_of_house;
 pub use front_of_house::hosting as Hosting;
 
-fn serve_order() { }
+pub fn serve_order() { }
 
 
 
