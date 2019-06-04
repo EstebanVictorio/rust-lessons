@@ -13,5 +13,10 @@ fn main() {
         print!("{}, ", i);
     }
 
+    for i in &mut vector {
+        *i+= 1;
+        print!("{}, ", i);
+    }
+
     
 }
