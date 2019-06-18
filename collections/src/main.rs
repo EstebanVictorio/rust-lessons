@@ -1,3 +1,8 @@
+enum Hello {
+    Int(i32),
+    Text(String)
+}
+
 fn main() {
     let mut vector = vec![1,2,3];
     for i in &vector {
@@ -17,6 +22,12 @@ fn main() {
         *i+= 1;
         print!("{}, ", i);
     }
-
     
+
+    let row = vec![
+        Hello::Int(55),
+        Hello::Text(String::from("Hello"))
+    ];
+
+
 }
