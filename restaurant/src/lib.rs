@@ -1,7 +1,8 @@
 mod front_of_house;
 pub use front_of_house::hosting as Hosting;
+pub use front_of_house::serving as Serving;
 
-fn serve_order() { }
+pub fn serve_order() { }
 
 
 
@@ -9,6 +10,7 @@ pub fn eat_at_restaurant() {
     Hosting::add_to_waitlist();
 
     Hosting::add_to_waitlist();
+    Serving::take_order();
 }
 
 mod back_of_house {
